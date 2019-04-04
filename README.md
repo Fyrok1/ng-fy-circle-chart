@@ -66,7 +66,7 @@ add this code to html file
 |tickAngle|number|10|Every update, add or minus count. Not percent its angle. Max 360 (Not Recomended), Min 1.
 
 ### fyColor
-```json
+```
 	{
 		percent:number,
 		r:number,
