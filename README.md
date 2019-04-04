@@ -1,27 +1,88 @@
+
 # NgFyCircleChart
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.3.
+Hi, its my first angular package. If find any bug or have any questions please ask me. Enjoy.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Installation
 
-## Code scaffolding
+  
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+    npm i ng-fy-circle-chart
 
-## Build
+  
+  
+## Import
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+  ```ts
+  import { NgFyCircleChartComponent} from  'ng-fy-circle-chart';
+   ```
+  
+```ts
+@NgModule({
+	declarations: [
+		AppComponent,
+		NgFyCircleChartComponent // add this
+	],
+	imports: [
+		BrowserModule,
+	],
+	providers: [],
+	bootstrap: [AppComponent]
+})
+```
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Usage
+  
+```html
+<fy-circle-chart></fy-circle-chart>
+```
 
-## Running end-to-end tests
+add this code to html file
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Attributes
+
+	
+| Name | Type | Default | Description |
+|--|--|--|--|
+| percent | number | 60 | Circle value. Max 100, Min 0 |
+|size|number|150|Canvas height and width
+|backgroundColor|string|#ccc|Circle background color not canvas. Hex or rgb color.
+|color|string or fyColor[]|#ff0000|Circle active color. Hex or rgb. fyColor for smooth color change by percent. fyColor detail is under this table.
+|textColor|string|#4b4b4b|Percent and custom text color. Hex or rgb color.
+|lineWidth|number|10|Cirle width
+|hoverLineWidth|number|lineWidth|Circle width on hover. Try it, its smooth.
+|startDelay|number|0|Delay to start animation. For smooth page loading.
+|text|string[]|[]|Custom text. Not Recommended more then 2.
+|percentFontSize|string|30px|Percent font size
+|textFontSize|string|16px|Custom Text font size
+|horizontalAlign|string|center|If parent element width bigger then size its justify
+|animation|boolean|true|Recommended set false when use multi at same page 
+|skeleton|boolean|false|Skeleton loading option
+|fps|number|20|Count of update for second.
+|tickAngle|number|10|Every update, add or minus count. Not percent its angle. Max 360 (Not Recomended), Min 1.
+
+### fyColor
+```json
+	{
+		percent:number,
+		r:number,
+		g:number,
+		b:number
+	}
+```
+its an interface if u want  import to component or use it as u want.
+
+Remember color is string or fyColor[]
+
+	
+
+## Quick Contact
+
+Mail to tahsincesur1@gmail.com
+
+## Keywords
+angular, angular2, ng, ngx, ng2, angular6, angular7, circle, chart, circle chart, Angular circle chart, ng circle chart
